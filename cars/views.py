@@ -9,7 +9,7 @@ def cars_view(request):
     if search:
         cars = Car.objects.filter(model__icontains=search).order_by('model')
     
-    return render(request ,
+    return render(request,
                 'cars.html',
                 {'cars': cars}
             )
